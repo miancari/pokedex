@@ -1,0 +1,118 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 0 20px 0;
+}
+
+.search input {
+    height: 25px;
+    width: 300px;
+    background-color: azure;
+    border: solid rgb(37, 37, 158);
+    border-radius: 20px;
+    font-family: 'Righteous', cursive;
+    margin: 10px;
+    box-shadow: 5px 5px 5px 5px lightblue;
+}
+
+.search button {
+    background-color: rgb(150, 141, 141);
+    border-style: outset;
+    height: 25px;
+    margin: 10px;
+    
+}
+
+.search button:hover {
+    background-color: rgb(214, 34, 64);
+    
+  }
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 70px;
+}
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.title img {
+    width: 180px;
+    height: 70px;
+}
+/* Estilo base de la tarjeta */
+.habilidades-tarjeta {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    margin: 20px;
+    float: left;
+}
+
+.habilidades-tarjeta-front,
+.habilidades-tarjeta-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+/* Estilo del frente de la tarjeta */
+.habilidades-tarjeta-front {
+    background-color: #f0f0f0;
+    font-family: 'Righteous', cursive;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del reverso de la tarjeta (inicialmente oculto) */
+.habilidades-tarjeta-back {
+    background: linear-gradient(red, rgb(163, 147, 147), white) ;
+    border: dotted blue;
+    border-radius: 0 50px;
+    font-family: 'Righteous', cursive;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+/* Efecto de volteo al pasar el cursor */
+.habilidades-tarjeta:hover .habilidades-tarjeta-front {
+    transform: rotateY(180deg);
+}
+
+.habilidades-tarjeta:hover .habilidades-tarjeta-back {
+    transform: rotateY(0deg);
+}
+
+/* Estilos para la lista de Pokémon */
+.div-pokemon {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid #9db471;
+    border-radius: 50px 0;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+/* Otros estilos según tus preferencias */
